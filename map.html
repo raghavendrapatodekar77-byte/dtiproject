@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GIS Map - ILRDVS</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-slate-900 text-white">
+
+<header class="bg-slate-800 p-5 shadow-lg">
+<h1 class="text-3xl font-bold text-orange-400">
+🗺 GIS Parcel Viewer
+</h1>
+</header>
+
+<div class="grid lg:grid-cols-4 gap-6 p-8">
+
+<div class="lg:col-span-3">
+<div id="map" style="height:650px;border-radius:15px;"></div>
+</div>
+
+<div class="bg-slate-800 rounded-xl p-6">
+
+<h2 class="text-2xl font-bold mb-6">
+Parcel Information
+</h2>
+
+<p><strong>Owner</strong></p>
+<p>Ramesh Patil</p>
+
+<br>
+
+<p><strong>Village</strong></p>
+<p>Rampur</p>
+
+<br>
+
+<p><strong>Khasra</strong></p>
+<p>101</p>
+
+<br>
+
+<p><strong>Area</strong></p>
+<p>2.75 Acres</p>
+
+<br>
+
+<button class="bg-orange-500 hover:bg-orange-600 w-full py-3 rounded">
+Generate Certificate
+</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
