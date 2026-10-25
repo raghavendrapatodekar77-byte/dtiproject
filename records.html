@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Land Records</title>
+
+    <style>
+        body{
+            font-family:Arial;
+            background:#111827;
+            color:white;
+            padding:30px;
+        }
+
+        table{
+            width:100%;
+            border-collapse:collapse;
+            margin-top:20px;
+        }
+
+        th,td{
+            border:1px solid #444;
+            padding:12px;
+            text-align:center;
+        }
+
+        th{
+            background:#f97316;
+        }
+
+        tr:nth-child(even){
+            background:#1f2937;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<h1>Land Records</h1>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Survey No</th>
+<th>Owner</th>
+<th>Village</th>
+<th>Area</th>
+<th>Status</th>
+
+</tr>
+
+</thead>
+
+<tbody id="recordsTable">
+
+</tbody>
+
+</table>
+
+<script>
+
+async function loadRecords(){
+
+const response = await fetch("http://127.0.0.1:5000/api/records");
+
+const data = await response.json();
+
+let html="";
+
+data.forEach(record=>{
+
+html += `
+<tr>
+
+<td>${record.id}</td>
+<td>${record.survey_no}</td>
+<td>${record.owner_name}</td>
+<td>${record.village}</td>
+<td>${record.area}</td>
+<td>${record.status}</td>
+
+</tr>
+`;
+
+});
+
+document.getElementById("recordsTable").innerHTML = html;
+
+}
+
+loadRecords();
+
+</script>
+
+</body>
+</html>
