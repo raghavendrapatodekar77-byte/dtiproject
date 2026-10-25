@@ -40,3 +40,22 @@ document.addEventListener("DOMContentLoaded",()=>{
 console.log("ILRDVS Loaded Successfully");
 
 });
+// ================= Dashboard API =================
+
+async function loadDashboard() {
+    try {
+        const response = await fetch("http://127.0.0.1:5000/api/dashboard");
+
+        const data = await response.json();
+
+        document.getElementById("totalParcels").innerHTML = data.total_parcels;
+        document.getElementById("digitized").innerHTML = data.digitized;
+        document.getElementById("pending").innerHTML = data.pending;
+        document.getElementById("certificates").innerHTML = data.certificates;
+
+    } catch (err) {
+        console.error("Dashboard Error:", err);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", loadDashboard);
