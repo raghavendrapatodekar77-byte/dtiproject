@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ILRDVS - Intelligent Land Record Digitization & Validation System</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Leaflet -->
+<link rel="stylesheet"
+href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- QR Code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="bg-slate-900 text-white">
+
+<header class="bg-slate-800 shadow-lg">
+
+<div class="max-w-7xl mx-auto flex justify-between items-center p-5">
+
+<h1 class="text-2xl font-bold text-orange-400">
+🌍 ILRDVS
+</h1>
+
+<nav class="space-x-8">
+
+<a href="#" class="hover:text-orange-400">
+Home
+</a>
+
+<a href="#">
+Dashboard
+</a>
+
+<a href="#">
+GIS Map
+</a>
+
+<a href="#">
+OCR
+</a>
+
+<a href="#">
+Validation
+</a>
+
+<a href="#">
+Certificate
+</a>
+
+</nav>
+
+</div>
+
+</header>
+
+<section class="text-center py-24">
+
+<h2 class="text-5xl font-bold mb-8">
+
+Intelligent Land Record Digitization
+<br>
+& Validation System
+
+</h2>
+
+<p class="text-xl text-gray-300">
+
+Digital India Land Records Modernization Programme
+
+</p>
+
+<button
+class="mt-10 bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-lg text-lg">
+
+Launch Dashboard
+
+</button>
+
+</section>
+
+<section class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+
+<div class="bg-slate-800 p-6 rounded-xl">
+
+<h3 class="text-2xl mb-3">
+
+📍 GIS Mapping
+
+</h3>
+
+<p>
+
+Interactive parcel mapping using Leaflet.
+
+</p>
+
+</div>
+
+<div class="bg-slate-800 p-6 rounded-xl">
+
+<h3 class="text-2xl mb-3">
+
+📄 OCR Digitization
+
+</h3>
+
+<p>
+
+Upload land records for AI extraction.
+
+</p>
+
+</div>
+
+<div class="bg-slate-800 p-6 rounded-xl">
+
+<h3 class="text-2xl mb-3">
+
+🛡 AI Validation
+
+</h3>
+
+<p>
+
+Automatic discrepancy detection.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="my-16">
+
+<h2 class="text-center text-3xl mb-6">
+
+Interactive GIS Map
+
+</h2>
+
+<div
+id="map"
+style="height:500px;width:90%;margin:auto;border-radius:15px;">
+</div>
+
+</section>
+
+<footer class="bg-slate-800 mt-20 p-6 text-center">
+
+© 2026 ILRDVS | Smart India Hackathon
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
