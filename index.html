@@ -1,67 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ILRDVS - Intelligent Land Record Digitization & Validation System</title>
-
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com"></script>
-
-<!-- Font Awesome -->
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<!-- Leaflet -->
-<link rel="stylesheet"
-href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<!-- QR Code -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-
-<!-- Custom CSS -->
-<link rel="stylesheet" href="styles.css">
-
-</head>
-
 <body class="bg-slate-900 text-white">
 
-<header class="bg-slate-800 shadow-lg">
+<!-- Header -->
+<header class="bg-slate-800 shadow-lg sticky top-0 z-50">
 
-<div class="max-w-7xl mx-auto flex justify-between items-center p-5">
+<div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-<h1 class="text-2xl font-bold text-orange-400">
+<h1 class="text-3xl font-bold text-orange-400">
 🌍 ILRDVS
 </h1>
 
-<nav class="space-x-8">
+<nav class="hidden md:flex space-x-8 font-semibold">
 
-<a href="#" class="hover:text-orange-400">
-Home
-</a>
+<a href="#" class="hover:text-orange-400">Home</a>
 
-<a href="#">
-Dashboard
-</a>
+<a href="#dashboard" class="hover:text-orange-400">Dashboard</a>
 
-<a href="#">
-GIS Map
-</a>
+<a href="#search" class="hover:text-orange-400">Search</a>
 
-<a href="#">
-OCR
-</a>
+<a href="#map" class="hover:text-orange-400">GIS Map</a>
 
-<a href="#">
-Validation
-</a>
+<a href="#features" class="hover:text-orange-400">Features</a>
 
-<a href="#">
-Certificate
-</a>
+<a href="#">Login</a>
 
 </nav>
 
@@ -69,105 +29,735 @@ Certificate
 
 </header>
 
-<section class="text-center py-24">
+<!-- Hero -->
 
-<h2 class="text-5xl font-bold mb-8">
+<section class="text-center py-20 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900">
 
-Intelligent Land Record Digitization
+<h1 class="text-6xl font-extrabold">
+
+Intelligent Land Record
+
 <br>
-& Validation System
 
-</h2>
+<span class="text-orange-400">
 
-<p class="text-xl text-gray-300">
+Digitization & Validation System
 
-Digital India Land Records Modernization Programme
+</span>
+
+</h1>
+
+<p class="text-gray-300 text-xl mt-8">
+
+Digital India Land Records Modernization Programme (DILRMP)
 
 </p>
 
-<button
-class="mt-10 bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-lg text-lg">
+<div class="mt-10 space-x-4">
+
+<button class="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-xl text-lg">
 
 Launch Dashboard
 
 </button>
 
+<button class="border border-orange-400 px-8 py-4 rounded-xl hover:bg-orange-500">
+
+View Map
+
+</button>
+
+</div>
+
 </section>
 
-<section class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8">
+<!-- Dashboard -->
 
-<div class="bg-slate-800 p-6 rounded-xl">
+<section id="dashboard" class="py-16">
 
-<h3 class="text-2xl mb-3">
+<div class="max-w-7xl mx-auto">
+
+<h2 class="text-4xl font-bold text-center mb-12">
+
+Government Dashboard
+
+</h2>
+
+<div class="grid md:grid-cols-4 gap-8">
+
+<div class="dashboard-card">
+
+<p class="text-gray-400">Land Parcels</p>
+
+<h1 class="text-5xl font-bold text-orange-400 mt-4">
+
+15,842
+
+</h1>
+
+</div>
+
+<div class="dashboard-card">
+
+<p class="text-gray-400">Digitized Records</p>
+
+<h1 class="text-5xl font-bold text-green-400 mt-4">
+
+14,932
+
+</h1>
+
+</div>
+
+<div class="dashboard-card">
+
+<p class="text-gray-400">Pending Validation</p>
+
+<h1 class="text-5xl font-bold text-yellow-400 mt-4">
+
+236
+
+</h1>
+
+</div>
+
+<div class="dashboard-card">
+
+<p class="text-gray-400">Certificates Issued</p>
+
+<h1 class="text-5xl font-bold text-blue-400 mt-4">
+
+5,281
+
+</h1>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Search -->
+
+<section id="search" class="py-12">
+
+<div class="max-w-6xl mx-auto bg-slate-800 rounded-xl p-8">
+
+<h2 class="text-3xl font-bold mb-6">
+
+🔍 Search Land Records
+
+</h2>
+
+<div class="grid md:grid-cols-4 gap-4">
+
+<input
+type="text"
+placeholder="ULPIN"
+class="p-4 rounded-lg text-black">
+
+<input
+type="text"
+placeholder="Khasra Number"
+class="p-4 rounded-lg text-black">
+
+<input
+type="text"
+placeholder="Owner Name"
+class="p-4 rounded-lg text-black">
+
+<button
+class="bg-orange-500 hover:bg-orange-600 rounded-lg">
+
+Search
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Features -->
+
+<section id="features" class="max-w-7xl mx-auto py-16">
+
+<h2 class="text-center text-4xl font-bold mb-12">
+
+Platform Features
+
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="bg-slate-800 rounded-xl p-8">
+
+<h3 class="text-2xl mb-4">
 
 📍 GIS Mapping
 
 </h3>
 
-<p>
+<p class="text-gray-300">
 
-Interactive parcel mapping using Leaflet.
+Interactive parcel mapping with satellite imagery and boundary visualization.
 
 </p>
 
 </div>
 
-<div class="bg-slate-800 p-6 rounded-xl">
+<div class="bg-slate-800 rounded-xl p-8">
 
-<h3 class="text-2xl mb-3">
+<h3 class="text-2xl mb-4">
 
 📄 OCR Digitization
 
 </h3>
 
-<p>
+<p class="text-gray-300">
 
-Upload land records for AI extraction.
+Upload scanned land documents and automatically extract important information.
 
 </p>
 
 </div>
 
-<div class="bg-slate-800 p-6 rounded-xl">
+<div class="bg-slate-800 rounded-xl p-8">
 
-<h3 class="text-2xl mb-3">
+<h3 class="text-2xl mb-4">
 
 🛡 AI Validation
 
 </h3>
 
-<p>
+<p class="text-gray-300">
 
-Automatic discrepancy detection.
+Detect ownership mismatches, boundary conflicts and duplicate records using AI.
 
 </p>
 
 </div>
 
+</div>
+
 </section>
+  <!-- ================= GIS SECTION ================= -->
 
-<section class="my-16">
+<section class="py-16 bg-slate-800">
 
-<h2 class="text-center text-3xl mb-6">
+<div class="max-w-7xl mx-auto">
 
-Interactive GIS Map
+<h2 class="text-4xl font-bold text-center mb-10">
+
+🗺️ GIS Parcel Viewer
 
 </h2>
 
-<div
-id="map"
-style="height:500px;width:90%;margin:auto;border-radius:15px;">
+<div class="grid lg:grid-cols-3 gap-8">
+
+<!-- Map -->
+
+<div class="lg:col-span-2">
+
+<div id="map"
+class="rounded-xl shadow-xl"
+style="height:550px;">
+</div>
+
+</div>
+
+<!-- Parcel Details -->
+
+<div class="bg-slate-900 rounded-xl p-6">
+
+<h3 class="text-2xl font-bold mb-6">
+
+Parcel Details
+
+</h3>
+
+<p><strong>ULPIN:</strong></p>
+
+<p class="text-orange-400 mb-4">
+
+MH2725-0101-9482
+
+</p>
+
+<p><strong>Owner</strong></p>
+
+<p class="mb-4">
+
+Ramesh Patil
+
+</p>
+
+<p><strong>Khasra No.</strong></p>
+
+<p class="mb-4">
+
+101
+
+</p>
+
+<p><strong>Village</strong></p>
+
+<p class="mb-4">
+
+Rampur
+
+</p>
+
+<p><strong>Status</strong></p>
+
+<span class="bg-green-600 px-4 py-2 rounded">
+
+Verified
+
+</span>
+
+<button
+class="w-full bg-orange-500 hover:bg-orange-600 mt-8 py-3 rounded-lg">
+
+View Full Record
+
+</button>
+
+</div>
+
+</div>
+
 </div>
 
 </section>
 
-<footer class="bg-slate-800 mt-20 p-6 text-center">
+<!-- ================= OCR ================= -->
 
-© 2026 ILRDVS | Smart India Hackathon
+<section class="py-20">
 
-</footer>
+<div class="max-w-6xl mx-auto">
 
-<script src="script.js"></script>
+<h2 class="text-4xl text-center font-bold mb-12">
+
+📄 OCR Digitization
+
+</h2>
+
+<div class="grid md:grid-cols-2 gap-10">
+
+<div class="bg-slate-800 rounded-xl p-8">
+
+<h3 class="text-2xl mb-6">
+
+Upload Land Record
+
+</h3>
+
+<input
+type="file"
+class="w-full p-4 rounded bg-white text-black">
+
+<button
+class="bg-orange-500 hover:bg-orange-600 mt-6 px-8 py-3 rounded-lg">
+
+Upload Document
+
+</button>
+
+</div>
+
+<div class="bg-slate-800 rounded-xl p-8">
+
+<h3 class="text-2xl mb-6">
+
+OCR Extracted Data
+
+</h3>
+
+<table class="w-full">
+
+<tr>
+
+<td>Owner</td>
+
+<td>Ramesh Patil</td>
+
+</tr>
+
+<tr>
+
+<td>Khasra</td>
+
+<td>101</td>
+
+</tr>
+
+<tr>
+
+<td>Village</td>
+
+<td>Rampur</td>
+
+</tr>
+
+<tr>
+
+<td>Area</td>
+
+<td>2.75 Acres</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= VALIDATION ================= -->
+
+<section class="bg-slate-800 py-20">
+
+<div class="max-w-6xl mx-auto">
+
+<h2 class="text-4xl font-bold text-center mb-12">
+
+🛡 AI Validation Report
+
+</h2>
+
+<div class="grid md:grid-cols-4 gap-6">
+
+<div class="dashboard-card">
+
+<h1 class="text-5xl text-green-400">
+
+98%
+
+</h1>
+
+<p>
+
+Accuracy
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h1 class="text-5xl text-red-400">
+
+2
+
+</h1>
+
+<p>
+
+Discrepancies
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h1 class="text-5xl text-blue-400">
+
+95%
+
+</h1>
+
+<p>
+
+OCR Confidence
+
+</p>
+
+</div>
+
+<div class="dashboard-card">
+
+<h1 class="text-5xl text-yellow-400">
+
+3s
+
+</h1>
+
+<p>
+
+Processing Time
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ULPIN ================= -->
+
+<section class="py-20">
+
+<div class="max-w-5xl mx-auto bg-slate-800 rounded-xl p-10">
+
+<h2 class="text-4xl font-bold mb-8">
+
+📍 Generate ULPIN
+
+</h2>
+
+<div class="grid md:grid-cols-2 gap-5">
+
+<input
+type="text"
+placeholder="State Code"
+class="p-4 rounded text-black">
+
+<input
+type="text"
+placeholder="Village Code"
+class="p-4 rounded text-black">
+
+<input
+type="text"
+placeholder="Khasra Number"
+class="p-4 rounded text-black">
+
+<button
+class="bg-orange-500 hover:bg-orange-600 rounded">
+
+Generate
+
+</button>
+
+</div>
+
+<div class="mt-8">
+
+<h3 class="text-xl">
+
+Generated ULPIN
+
+</h3>
+
+<p class="text-3xl font-bold text-orange-400">
+
+MH2725-0101-9482
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= RECENT RECORDS ================= -->
+
+<section class="py-20 bg-slate-800">
+
+<div class="max-w-7xl mx-auto">
+
+<h2 class="text-4xl font-bold text-center mb-10">
+
+📋 Recent Land Records
+
+</h2>
+
+<div class="overflow-x-auto">
+
+<table class="w-full text-center border-collapse">
+
+<thead>
+
+<tr class="bg-orange-500">
+
+<th class="p-4">ULPIN</th>
+
+<th>Owner</th>
+
+<th>Village</th>
+
+<th>Status</th>
+
+<th>Action</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+<tr class="border-b border-gray-700">
+
+<td>MH2725-0101-9482</td>
+
+<td>Ramesh Patil</td>
+
+<td>Rampur</td>
+
+<td class="text-green-400">
+
+Verified
+
+</td>
+
+<td>
+
+<button class="bg-blue-500 px-4 py-2 rounded">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+<tr class="border-b border-gray-700">
+
+<td>MH2725-0102-8421</td>
+
+<td>Suresh Pawar</td>
+
+<td>Rampur</td>
+
+<td class="text-yellow-400">
+
+Pending
+
+</td>
+
+<td>
+
+<button class="bg-blue-500 px-4 py-2 rounded">
+
+View
+
+</button>
+
+</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ILRDVS Login</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="bg-slate-900 flex items-center justify-center min-h-screen">
+
+<div class="bg-slate-800 p-10 rounded-2xl shadow-xl w-full max-w-md">
+
+<h1 class="text-4xl font-bold text-center text-orange-400 mb-8">
+
+🌍 ILRDVS
+
+</h1>
+
+<p class="text-center text-gray-300 mb-8">
+
+Government Land Record Portal
+
+</p>
+
+<form>
+
+<label class="block mb-2">
+
+Username
+
+</label>
+
+<input
+type="text"
+class="w-full p-4 rounded-lg text-black mb-5"
+placeholder="Enter Username">
+
+<label class="block mb-2">
+
+Password
+
+</label>
+
+<input
+type="password"
+class="w-full p-4 rounded-lg text-black mb-6"
+placeholder="Enter Password">
+
+<label class="block mb-3">
+
+Login As
+
+</label>
+
+<select
+class="w-full p-4 rounded-lg text-black mb-8">
+
+<option>Citizen</option>
+
+<option>Officer</option>
+
+<option>Admin</option>
+
+</select>
+
+<button
+type="button"
+onclick="login()"
+class="w-full bg-orange-500 hover:bg-orange-600 py-4 rounded-xl text-xl">
+
+Login
+
+</button>
+
+</form>
+
+</div>
+
+<script>
+
+function login(){
+
+alert("Login Successful!");
+
+window.location.href="dashboard.html";
+
+}
+
+</script>
 
 </body>
+
 </html>
