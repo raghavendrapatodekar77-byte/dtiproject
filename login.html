@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ILRDVS Login</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="bg-slate-900 flex items-center justify-center min-h-screen">
+
+<div class="bg-slate-800 p-10 rounded-2xl shadow-xl w-full max-w-md">
+
+<h1 class="text-4xl font-bold text-center text-orange-400 mb-8">
+
+🌍 ILRDVS
+
+</h1>
+
+<p class="text-center text-gray-300 mb-8">
+
+Government Land Record Portal
+
+</p>
+
+<form>
+
+<label class="block mb-2">
+
+Username
+
+</label>
+
+<input
+type="text"
+class="w-full p-4 rounded-lg text-black mb-5"
+placeholder="Enter Username">
+
+<label class="block mb-2">
+
+Password
+
+</label>
+
+<input
+type="password"
+class="w-full p-4 rounded-lg text-black mb-6"
+placeholder="Enter Password">
+
+<label class="block mb-3">
+
+Login As
+
+</label>
+
+<select
+class="w-full p-4 rounded-lg text-black mb-8">
+
+<option>Citizen</option>
+
+<option>Officer</option>
+
+<option>Admin</option>
+
+</select>
+
+<button
+type="button"
+onclick="login()"
+class="w-full bg-orange-500 hover:bg-orange-600 py-4 rounded-xl text-xl">
+
+Login
+
+</button>
+
+</form>
+
+</div>
+
+<script>
+
+function login(){
+
+alert("Login Successful!");
+
+window.location.href="dashboard.html";
+
+}
+
+</script>
+
+</body>
+
+</html>
